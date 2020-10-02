@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/fab_margin">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/default_profile_picture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/my_profile_picture"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/my_profile_picture"
+        android:id="@+id/my_profile_name"
+        android:layout_margin="@dimen/fab_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friend_profile_last_name"
+            android:textSize="24dp"
+            android:id="@+id/my_profile_last_name"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friend_profile_first_name"
+            android:textSize="24dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/my_profile_first_name"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/my_profile_user_infos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_profile_name"
+        android:layout_marginBottom="@dimen/fab_margin">
+
+        <TableRow>
+            <TextView
+                android:text= "@string/my_profile_username"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/my_profile_username" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/my_profile_mail_address"
+                android:textStyle="bold"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:id="@+id/my_profile_mail_address" />
+            </HorizontalScrollView>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profile_lastpartytext"
+        android:layout_below="@id/my_profile_user_infos"
+        android:id="@+id/my_profile_lastpartytext"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_profile_lastpartytext"
+        android:id="@+id/my_profile_lastparty" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profile_edit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/my_profile_modify" />
+</RelativeLayout>

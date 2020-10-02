@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/connection_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.pact41.lastnight.client_server.ConnectionTestActivity">
+
+    <EditText
+        android:id="@+id/connection_test_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Requête"/>
+
+    <Button
+        android:id="@+id/connection_test_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connection_test_request"
+        android:text="envoyer" />
+
+    <ImageView
+        android:id="@+id/connection_test_image_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connection_test_send"/>
+
+    <TextView
+        android:id="@+id/connection_test_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connection_test_send"/>
+
+    <Button
+        android:id="@+id/connection_test_disconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="deconnexion"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

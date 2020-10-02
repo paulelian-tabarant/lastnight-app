@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.pact41.lastnight.activities.EditProfileActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_account_last_name"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/edit_profile_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_profile_last_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_account_first_name"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/edit_profile_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_profile_first_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_account_mail"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/edit_profile_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_profile_mail"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/edit_profile_confirm_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_profile_confirm_mail"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_password"/>
+
+    <EditText
+        android:id="@+id/edit_profile_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_profile_new_password" />
+
+    <EditText
+        android:id="@+id/edit_profile_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_profile_confirm_new_password" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fab_margin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_profile_picture"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/edit_profile_current_picture"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_profile_picture"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/edit_profile_picture"/>
+
+        <Button
+            android:id="@+id/edit_profile_load_new_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_profile_current_picture"
+            android:layout_alignRight="@id/edit_profile_current_picture"
+            android:layout_alignLeft="@id/edit_profile_current_picture"
+            android:text="@string/edit_profile_load_new_picture"
+            android:textAllCaps="false">
+        </Button>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/edit_profile_confirm_changes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_profile_confirm_modifications"
+        android:layout_gravity="center|bottom"/>
+
+</LinearLayout>
+</ScrollView>

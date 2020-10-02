@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_refresh_button"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/menu_refresh"
+        app:showAsAction="always"
+        />
+    <item
+        android:title="@string/menu_edit_profile"
+        android:id="@+id/menu_item_profile"/>
+    <item
+        android:title="@string/menu_friends"
+        android:id="@+id/menu_item_friends"/>
+    <item
+        android:title="@string/menu_reports"
+        android:id="@+id/menu_item_reports"/>
+    <item
+        android:title="@string/menu_organize"
+        android:id="@+id/menu_item_organize"/>
+    <item
+        android:title="@string/menu_current_party"
+        android:id="@+id/menu_item_current_party"/>
+</menu>

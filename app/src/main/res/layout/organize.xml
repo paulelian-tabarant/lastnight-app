@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/fab_margin">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/default_party_picture"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/organize_picture"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organize_name"
+            android:textSize="17dp"
+            android:layout_below="@+id/organize_picture"
+            android:layout_marginTop="10dp"
+            android:id="@+id/organize_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/organize_nameedit"
+            android:layout_alignBaseline="@id/organize_name"
+            android:layout_toRightOf="@id/organize_name"
+            android:id="@+id/organize_name_input"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organize_date"
+            android:textSize="17dp"
+            android:layout_below="@+id/organize_name"
+            android:layout_marginTop="10dp"
+            android:id="@+id/organize_date"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/organize_date_pattern"
+            android:inputType="date"
+            android:layout_alignBaseline="@id/organize_date"
+            android:layout_toRightOf="@id/organize_date"
+            android:id="@+id/organize_date_input"/>
+
+        <TextView
+            android:id="@+id/organize_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/organize_place"
+            android:textSize="17dp"
+            android:layout_below="@id/organize_date"/>
+
+        <EditText
+            android:id="@+id/organize_place_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/organize_place_edit"
+            android:textSize = "17dp"
+            android:layout_alignBaseline="@id/organize_place"
+            android:layout_toRightOf="@id/organize_place"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organize_hours"
+            android:textSize="17dp"
+            android:layout_below="@id/organize_place"
+            android:layout_marginTop="10dp"
+            android:id="@+id/organize_hours"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/organize_hours_pattern"
+            android:inputType="time"
+            android:textSize="17dp"
+            android:layout_alignBaseline="@id/organize_hours"
+            android:layout_toRightOf="@id/organize_hours"
+            android:id="@+id/organize_hours_begin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organize_hours_next"
+            android:textSize="17dp"
+            android:layout_below="@+id/organize_date"
+            android:layout_toRightOf="@id/organize_hours_begin"
+            android:layout_marginTop="10dp"
+            android:id="@+id/organize_hours_next"
+            android:layout_alignBaseline="@id/organize_hours"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/organize_hours_pattern"
+            android:inputType="time"
+            android:textSize="17dp"
+            android:layout_alignBaseline="@id/organize_hours_next"
+            android:layout_toRightOf="@id/organize_hours_next"
+            android:id="@+id/organize_hours_end"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organize_price"
+            android:textSize="17dp"
+            android:layout_below="@id/organize_hours"
+            android:layout_marginTop="10dp"
+            android:id="@+id/organize_price"/>
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/organize_price"
+            android:hint="@string/organize_priceedit"
+            android:inputType="number"
+            android:textSize="17dp"
+            android:gravity="right"
+            android:layout_toRightOf="@id/organize_price"
+            android:id="@+id/organize_price_input"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organize_currency"
+            android:textSize="17dp"
+            android:layout_alignBaseline="@id/organize_price"
+            android:layout_toRightOf="@id/organize_price_input"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organize_admins"
+            android:textSize="17dp"
+            android:layout_below="@id/organize_price"
+            android:layout_marginTop="10dp"
+            android:id="@+id/organize_admins"/>
+
+        <EditText
+            android:id="@+id/organize_admin_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/organize_admins"
+            android:hint="@string/organize_admin_field_hint"/>
+
+        <LinearLayout
+            android:id="@+id/organize_admins_editor"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/organize_admin_username">
+
+            <Button
+                android:id="@+id/organize_add_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/organize_add_new_admin"
+                android:onClick="addItems" />
+
+            <ListView
+                android:id="@+id/organize_admins_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="false"
+                android:minHeight="17dp"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/organize_validate"
+            android:text="@string/organize_validate"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
+
+    </RelativeLayout>

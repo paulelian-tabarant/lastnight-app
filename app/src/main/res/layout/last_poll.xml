@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_margin="@dimen/fab_margin">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/poll_display_user_choice">
+        <TextView
+            android:id="@+id/poll_display_last_poll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <ListView
+            android:id="@+id/poll_display_last_poll_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="false"
+            android:layout_below="@id/poll_display_last_poll_title">
+        </ListView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/poll_display_user_choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/poll_display_validate_button"
+        android:textSize="20sp"
+        android:padding="@dimen/fab_margin"
+        android:background="@color/colorPrimary"
+        android:text="@string/last_poll_choice_default" />
+
+    <Button
+        android:id="@+id/poll_display_validate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/last_poll_confirm"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+</RelativeLayout>
